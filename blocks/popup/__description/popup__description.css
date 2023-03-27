@@ -1,0 +1,39 @@
+.popup__description {
+    width: 358px;
+    margin: 30px 0 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    height: 27px;
+    text-align: top;
+    color: #000000;
+}
+
+.popup__description:focus {
+    outline: 0;
+}
+
+@media screen and (max-width: 1279px) { 
+    .popup__description { 
+        width: 27.96875vw;
+        margin: 2.34375vw 0 0 0;
+        font-size: 1.09375vw;
+        line-height: 1.328125vw;
+        height: 2.109375vw;
+    } 
+}
+
+@media screen and (max-width: 767px) { 
+    .popup__description { 
+        width: 74.375vw;
+        margin: 9.375vw 0 0 0;
+        font-size: 4.375vw;
+        line-height: 5.3125vw;
+        height: 8.4375vw;
+    } 
+}

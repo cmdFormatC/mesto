@@ -1,0 +1,16 @@
+.popup__container {
+    margin: 155px 0 0 0;
+}
+
+
+@media screen and (max-width: 1279px) { 
+    .popup__container { 
+        margin: 12.109375vw 0 0 0;
+    } 
+}
+
+@media screen and (max-width: 767px) { 
+    .popup__container { 
+        margin: 86px 0 0 0;
+    } 
+}

@@ -1,0 +1,14 @@
+.element {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 282px;
+}
+
+
+@media screen and (max-width: 767px) { 
+    .element {
+        width: 88.125vw;
+        border-radius: 3.125vw;
+    } 
+}

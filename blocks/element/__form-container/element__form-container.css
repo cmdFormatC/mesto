@@ -1,0 +1,9 @@
+.element__form-container {
+    max-height: 19px;
+}
+
+@media screen and (max-width: 767px) { 
+    .element__form-container {
+        max-height: 5.9375vw;
+    } 
+}
