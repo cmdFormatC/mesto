@@ -10,6 +10,7 @@
 
 @media screen and (max-width: 1279px) { 
     .elements { 
+        margin: 3.90625vw auto 0 auto;
         grid-template-columns: repeat(2, minmax(min-content, max-content));
     } 
 }
@@ -18,5 +19,6 @@
         grid-template-columns: repeat(1, minmax(min-content, max-content));
         max-width: 88.125vw;
         gap: 6.25vw 0;
+        margin: 11.25vw auto 0 auto;
     } 
 }  

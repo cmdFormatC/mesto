@@ -6,4 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    top: 0;
+    left: 0;
+    justify-content: center;
 }

@@ -2,7 +2,19 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 81.81818181818182%;
     color: #545454;
     margin: 0;
 }
+
+@media screen and (max-width: 1279px) { 
+    .footer__copyright { 
+        font-size: 1.40625vw;
+    } 
+}
+@media screen and (max-width: 767px) { 
+    .footer__copyright { 
+        font-size: 4.375vw;
+        line-height: 82.35294117647059%;
+    } 
+}  

@@ -1,7 +1,7 @@
 .profile__add-button {
     padding: 0;
     border: 2px solid #FFFFFF;
-    border-radius: 0;
+    border-radius: 2px;
     background-color: #0000;
     width: 150px;
     height: 50px;
@@ -10,6 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 22px 22px;
+    align-self: center;
+    margin: 0 0 0 auto;
 }
 
 .profile__add-button:hover {
@@ -30,5 +32,6 @@
         height: 15.625vw;
         width: 88.125vw;
         background-size: 5vw 5vw;
+        margin: 11.25vw 0 0 0;
     } 
 }

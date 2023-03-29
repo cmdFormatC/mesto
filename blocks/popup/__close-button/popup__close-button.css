@@ -1,5 +1,7 @@
 .popup__close-button {
-    margin: 0 0 8px 438px;
+    position: absolute;
+    top: -40px;
+    right: -40px;
     padding: 0;
     background: transparent;
     border: 0;
@@ -16,17 +18,19 @@
 }
 
 @media screen and (max-width: 1279px) { 
-    .popup__close-button { 
+    .popup__close-button {
+        top: -3.125vw;
+        right: -3.125vw;
         width: 2.5vw;
         height: 2.5vw;
-        margin: 0 0 0.625vw 34.21875vw;
     } 
 }
 
 @media screen and (max-width: 767px) { 
     .popup__close-button { 
+        top: -11.25vw;
         width: 6.25vw;
         height: 6.25vw;
-        margin: 0 0 5vw 81.875vw;
+        right: 0;
     } 
 }

@@ -8,17 +8,6 @@
 </head>
 <body>
   <div class="root">
-    <div class="popup closed">
-      <div class="popup__container">
-        <button class="popup__close-button"></button>
-        <form class="popup__form" onsubmit="return false">
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <input type="text" class="popup__name" value="Жак-Ив Кусто">
-          <input type="text" class="popup__description" value="Исследователь океана">
-          <button class="popup__button">Сохранить</button>
-        </form>
-      </div>
-    </div>
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
@@ -28,21 +17,44 @@
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <h2 class="profile__description">Исследователь океана</h2>
-          <form class="profile__edit" onsubmit="return false">
-            <button class="profile__edit-button"></button>
-          </form>
+          <button type="button" class="profile__edit-button"></button>
         </div>
-        <form class="profile__add" onsubmit="return false">
-          <button class="profile__add-button"></button>
-        </form>
+        <button class="profile__add-button"></button>
       </section>
       <section class="elements">
         <div class="element">
           <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
           <div class="element__description">
             <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button class="element__like-button"></button>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="element__description">
+            <h3 class="element__title">Карачаевск</h3>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="element__description">
+            <h3 class="element__title">Карачаевск</h3>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="element__description">
+            <h3 class="element__title">Карачаевск</h3>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="element__description">
+            <h3 class="element__title">Карачаевск</h3>
+            <button type="button" class="element__like-button"></button>
             </form>
           </div>
         </div>
@@ -50,45 +62,7 @@
           <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
           <div class="element__description">
             <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button class="element__like-button"></button>
-            </form>
-          </div>
-        </div>
-        <div class="element">
-          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-          <div class="element__description">
-            <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button class="element__like-button"></button>
-            </form>
-          </div>
-        </div>
-        <div class="element">
-          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-          <div class="element__description">
-            <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button  class="element__like-button"></button>
-            </form>
-          </div>
-        </div>
-        <div class="element">
-          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-          <div class="element__description">
-            <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button class="element__like-button"></button>
-            </form>
-          </div>
-        </div>
-        <div class="element">
-          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-          <div class="element__description">
-            <h3 class="element__title">Карачаевск</h3>
-            <form onsubmit="return false" class="element__form-container">
-              <button class="element__like-button"></button>
-            </form>
+            <button type="button" class="element__like-button"></button>
           </div>
         </div>
       </section>
@@ -96,6 +70,17 @@
     <footer class="footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
+    <div class="popup popup_closed">
+      <div class="popup__container">
+        <button type="button" class="popup__close-button"></button>
+        <form class="popup__form" name="profileEdit" onsubmit="return false">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input type="text" class="popup__input popup__input_name" value="">
+          <input type="text" class="popup__input popup__input_description" value="">
+          <button class="popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
   </div>
   <script  src="./js/script.js"></script>
 </body>
