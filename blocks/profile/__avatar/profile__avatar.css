@@ -2,7 +2,7 @@
     width: 120px;
     border-radius: 50%;
     height: 120px;
-    object-fit: scale-down;
+    object-fit: contain;
     object-position: center;
 }
 
