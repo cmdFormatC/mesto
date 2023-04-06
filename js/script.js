@@ -36,6 +36,7 @@ const popupMesto = document.querySelector('#popupMesto').content;
 initialCards.forEach(function (createCard) {
     const mestoElement = element.cloneNode(true);
     mestoElement.querySelector('.element__image').src = createCard.link;
+    mestoElement.querySelector('.element__image').alt = createCard.name;
     mestoElement.querySelector('.element__title').textContent = createCard.name;
     elements.append(mestoElement);
 
@@ -116,6 +117,7 @@ function handleClick(e) {
         popopCaption = selectedItem.querySelector('.element__title').textContent;
         addPopup.querySelector('.popup-mesto__image').src = elementButton.src;
         addPopup.querySelector('.popup-mesto__caption').textContent = popopCaption;
+        addPopup.querySelector('.popup-mesto__image').alt = popopCaption
         popup.append(addPopup);
         const closeButton = document.querySelector('.popup__close-button');
         closeButton.addEventListener('click', popupMestoClose);
