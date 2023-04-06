@@ -11,7 +11,7 @@
     background-size: cover;
 }
 
-.element__like-button_image:hover{
+.element__like-button:hover{
     opacity: 0.5;
 }
 
