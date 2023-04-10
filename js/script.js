@@ -70,6 +70,7 @@ function closePopup (popup) {
 function createCard () {
     const card = document.querySelector('.element').cloneNode(true);
     card.querySelector('.element__image').src = popupInputCardUrl.value;
+    card.querySelector('.element__image').alt = popupInputCardName.value;
     card.querySelector('.element__title').textContent = popupInputCardName.value;
     return card
 }
