@@ -40,11 +40,11 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/_closed/popup_closed.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__input/popup__input.css);
 
-@import url(../blocks/popup-mesto/__caption/popup-mesto__caption.css);
-@import url(../blocks/popup-mesto/__container/popup-mesto__container.css);
-@import url(../blocks/popup-mesto/__image/popup-mesto__image.css);
+@import url(../blocks/popup/_zoom-image/__caption/popup_zoom-image__caption.css);
+@import url(../blocks/popup/_zoom-image/__container/popup_zoom-image__container.css);
+@import url(../blocks/popup/_zoom-image/__image/popup_zoom-image__image.css);
 
 
