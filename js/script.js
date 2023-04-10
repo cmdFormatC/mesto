@@ -13,8 +13,8 @@ const popupInputProfileDescription = popupEditProfile.querySelector('.popup__inp
 const popupProfileCloseButton = popupEditProfile.querySelector('.popup__close-button');
 const popupAddCloseButton = popupAddCard.querySelector('.popup__close-button');
 const popupImageCloseButton = popupImage.querySelector('.popup__close-button');
-const popupScaledImage = popupImage.querySelector('.popup_zoom-image__image');
-const popupImageCaption = popupImage.querySelector('.popup_zoom-image__caption');
+const popupScaledImage = popupImage.querySelector('.popup__image');
+const popupImageCaption = popupImage.querySelector('.popup__caption');
 const popupInputCardUrl = popupAddCard.querySelector('.popup__input_card_url');
 const popupInputCardName = popupAddCard.querySelector('.popup__input_card_name');
 

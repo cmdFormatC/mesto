@@ -1,4 +1,4 @@
-.popup_zoom-image__caption {
+.popup__caption {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -7,7 +7,7 @@
     margin: 10px 0 0 0;
 }
 @media screen and (max-width: 767px) { 
-    .popup_zoom-image__caption {
+    .popup__caption {
         width: 88.125vw;
         font-size: 3.75vw;
         line-height: 4.6875vw;
