@@ -75,7 +75,6 @@ function submitAddCardForm (evt) {
   evt.preventDefault(); 
   const newCard = createCard (popupInputCardUrl.value, popupInputCardName.value);
   const firstElement = elements.firstChild.nextSibling;
-  console.log(newCard)
   elements.insertBefore(newCard, firstElement); 
   closePopup(popupAddCard);
   popupInputCardUrl.value = '';
