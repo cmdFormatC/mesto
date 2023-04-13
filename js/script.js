@@ -17,7 +17,7 @@ const popupScaledImage = popupImage.querySelector('.popup__image');
 const popupImageCaption = popupImage.querySelector('.popup__caption');
 const popupInputCardUrl = popupAddCard.querySelector('.popup__input_card_url');
 const popupInputCardName = popupAddCard.querySelector('.popup__input_card_name');
-
+const popoups = Array.from(document.querySelectorAll('.popup'));
 const initialCards = [
     {
       name: 'Архыз',
@@ -54,8 +54,8 @@ function createCard (url, cardName) {
   return card
 }
 initialCards.forEach(function (createCards) {
-    const mestoElement = createCard(createCards.link, createCards.name);
-    elements.append(mestoElement);
+    const card = createCard(createCards.link, createCards.name);
+    elements.append(card);
 });
 function submitEditProfileForm (evt) {
     evt.preventDefault(); 
@@ -87,9 +87,9 @@ function openPopupProfileEdit() {
 }
 function zoomCard(elementButton) {
   popupScaledImage.src = elementButton.src;
-  const mestoName = elementButton.parentNode.querySelector('.element__title').textContent;
-  popupScaledImage.alt = mestoName;
-  popupImageCaption.textContent = mestoName;
+  const cardName = elementButton.parentNode.querySelector('.element__title').textContent;
+  popupScaledImage.alt = cardName;
+  popupImageCaption.textContent = cardName;
   openPopup(popupImage);
 }
 
@@ -106,6 +106,18 @@ function handleClick(e) {
       zoomCard(elementButton);
   } 
   }
+popoups.forEach((popup) => {
+  popup.addEventListener('click', function (evt) {
+    if (evt.target.classList.contains('popup')) {
+      closePopup(evt.target);
+    }
+  });
+  document.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      closePopup(popup);
+    }
+  });
+});
 elements.addEventListener('click', handleClick);
 addButton.addEventListener('click', () => openPopup (popupAddCard));
 editButton.addEventListener('click', openPopupProfileEdit);
