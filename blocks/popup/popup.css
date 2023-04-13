@@ -13,3 +13,6 @@
     opacity: 0;
     transition: visibility 0.1s, opacity 0.1s linear;
 }
+.popup:last-child {
+    background-color: rgba(0, 0, 0, 0.9);
+}

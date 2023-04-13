@@ -14,8 +14,8 @@
     color: #000000;
     border-radius: 0;
 }
-.popup__input:nth-child(3) {
-    margin: 30px 0 0 0;
+.popup__input:nth-child(4) {
+    margin: 0;
 }
 .popup__input:focus {
     outline: 0;
@@ -28,8 +28,8 @@
         line-height: 1.328125vw;
         height: 2.109375vw;
     }
-    .popup__input:nth-child(3) {
-        margin: 2.34375vw 0 0 0;
+    .popup__input:nth-child(4) {
+        margin: 0;
     }
 }
 
@@ -41,7 +41,7 @@
         line-height: 5.3125vw;
         height: 8.4375vw;
     }
-    .popup__input:nth-child(3) {
-        margin: 9.375vw 0 0 0;
+    .popup__input:nth-child(4) {
+        margin: 0 0 0 0;
     }
 }

@@ -40,11 +40,11 @@ const checkInputValidity = (formElement, inputElement) => {
 const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
     const buttonElement = formElement.querySelector(settings.submitButtonSelector);
-    toggleButtonState(inputList, buttonElement);
+    toggleButtonState(inputList, buttonElement, settings.inactiveButtonClass);
     inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', function () {
             checkInputValidity(formElement, inputElement);
-            toggleButtonState(inputList, buttonElement);
+            toggleButtonState(inputList, buttonElement, settings.inactiveButtonClass);
         });
     });
 };
@@ -53,13 +53,14 @@ const hasInvalidInput = (inputList) => {
     return !inputElement.validity.valid;
 }); 
 }
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, errorClass) => {
     if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(settings.inactiveButtonClass);
+    buttonElement.classList.add(errorClass);
     buttonElement.disabled = true;
   } else {
-    buttonElement.classList.remove(settings.inactiveButtonClass);
+    buttonElement.classList.remove(errorClass);
     buttonElement.disabled = false;
+    console.log('hui')
   } 
 }
 enableValidation(settings)
