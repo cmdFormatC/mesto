@@ -74,23 +74,25 @@ function submitEditProfileForm (evt) {
     profileJob.textContent = popupInputProfileDescription.value; 
     closePopup(popupEditProfile);
 }
-function openPopup (popup) {
-    popup.classList.add('popup_opened');
-    document.addEventListener('keydown', function (evt) {
-      if (evt.key === 'Escape') {
-        console.log(evt.key)
-      }
-    });
-}
-function closePopup (popup) {
-    popup.classList.remove('popup_opened');
-    document.removeEventListener('keydown', function (evt) {
-      if (evt.key === 'Escape') {
-        console.log(evt.key)
-      }
-    });
+function openPopup(popup) {
+  popup.classList.add("popup_opened");
+  function handleButtonEsc(evt) {
+    closePopupByButtonEsc(evt, popup);
+  }
+  document.addEventListener("keydown", handleButtonEsc);
+  popup.handleButtonEsc = handleButtonEsc;
 }
 
+function closePopupByButtonEsc(evt, popup) {
+  if (evt.key === "Escape") {
+    closePopup(popup);
+  }
+}
+
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", popup.handleButtonEsc);
+}
 function submitAddCardForm (evt) {
   evt.preventDefault(); 
   const newCard = createCard (popupInputCardUrl.value, popupInputCardName.value);
