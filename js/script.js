@@ -61,24 +61,25 @@ initialCards.forEach((item) => {
   const cardElement = card.generateCard();
   elements.append(cardElement);
 });
-formList.forEach((item) => {
-  const validation = new FormValidator(settings, item)
-  validation.enableValidation()
-  
-});
+
+const popupEditProfileValidation = new FormValidator(settings, popupEditProfileForm);
+popupEditProfileValidation.enableValidation();
+const popupAddCardValidation = new FormValidator(settings, popupAddCardForm);
+popupAddCardValidation.enableValidation();
 function submitEditProfileForm (evt) {
     evt.preventDefault(); 
     profileName.textContent = popupInputProfileName.value; 
     profileJob.textContent = popupInputProfileDescription.value; 
     closePopup(popupEditProfile);
 }
-function openPopup(popup) {
+function openPopup(popup, validationClass) {
   popup.classList.add("popup_opened");
   function handleButtonEsc(evt) {
     closePopupByButtonEsc(evt, popup);
   }
   document.addEventListener("keydown", handleButtonEsc);
   popup.handleButtonEsc = handleButtonEsc;
+  validationClass.resetValidation()
 }
 
 function closePopupByButtonEsc(evt, popup) {
@@ -93,21 +94,18 @@ function closePopup(popup) {
 }
 function submitAddCardForm (evt) {
   evt.preventDefault(); 
-  const card = new Card(popupInputCardUrl.value, popupInputCardName.value, elementTemplate);
+  const card = new Card(popupInputCardName.value, popupInputCardUrl.value, elementTemplate);
   const newCard = card.generateCard();
   const firstElement = elements.firstChild.nextSibling;
   elements.insertBefore(newCard, firstElement); 
   closePopup(popupAddCard);
   popupInputCardUrl.value = '';
   popupInputCardName.value = '';
-  const validation = new FormValidator(settings, popupAddCard);
-  validation.enableValidation();
-
 }
-function openPopupProfileEdit() {
+function openPopupProfileEdit(validationClass) {
   popupInputProfileName.value = profileName.textContent;
   popupInputProfileDescription.value = profileJob.textContent;
-  openPopup(popupEditProfile);
+  openPopup(popupEditProfile, validationClass);
 }
 export default function zoomCard(elementButton) {
   popupScaledImage.src = elementButton.src;
@@ -125,8 +123,8 @@ popoups.forEach((popup) => {
     }
   });
 });
-addButton.addEventListener('click', () => openPopup (popupAddCard));
-editButton.addEventListener('click', openPopupProfileEdit);
+addButton.addEventListener('click', () => openPopup (popupAddCard, popupAddCardValidation));
+editButton.addEventListener('click', () => openPopupProfileEdit (popupEditProfileValidation));
 popupEditProfileForm.addEventListener('submit', submitEditProfileForm);
 popupProfileCloseButton.addEventListener('click', () => closePopup (popupEditProfile));
 popupAddCloseButton.addEventListener('click', () => closePopup (popupAddCard));

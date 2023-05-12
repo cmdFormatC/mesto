@@ -5,6 +5,10 @@ import zoomCard from './script.js';
         this._name = name;
         this._link = link;
         this._template = template;
+        this._cardElement = this._getTemplate();
+        this._cardImage = this._cardElement.querySelector('.element__image');
+        this._likeButton = this._cardElement.querySelector('.element__like-button');
+        this._deleteButton = this._cardElement.querySelector('.element__delete-button');
       }
     _getTemplate() {
         const cardElement = this._template.content.cloneNode(true);
@@ -22,14 +26,10 @@ import zoomCard from './script.js';
       });
     };
     generateCard() {
-      const card = this._getTemplate();
-      const cardImage = card.querySelector('.element__image');
-      const likeButton = card.querySelector('.element__like-button');
-      const deleteButton = card.querySelector('.element__delete-button');
-      cardImage.src = this._link;
-      cardImage.alt = this._name;
-      card.querySelector('.element__title').textContent = this._name;
-      this._setEventListeners(deleteButton, likeButton, cardImage);
-      return card
+      this._cardImage.src = this._link;
+      this._cardImage.alt = this._name;
+      this._cardElement.querySelector('.element__title').textContent = this._name;
+      this._setEventListeners(this._deleteButton, this._likeButton, this._cardImage);
+      return this._cardElement
     }
 }
