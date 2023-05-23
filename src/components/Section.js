@@ -11,13 +11,7 @@ export default class Section {
             this._container.append(cardElement);
           });
     }
-    addItem = (inputValues) => {
-        this._items.push({
-            name: inputValues.cardName,
-            link: inputValues.cardUrl
-          });
-          const newCard = this._renderer(this._items[this._items.length - 1]);
-          const firstElement = this._container.firstChild.nextSibling;
-          this._container.insertBefore(newCard, firstElement); 
+    addItem = (item) => {
+        this._container.prepend(item); 
     }
 }

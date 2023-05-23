@@ -2,7 +2,7 @@
   "name": "mesto",
   "version": "0.0.1",
   "description": "* Реализрована функциональность с помощью js, а так же адаптивная верстка под разные устройства.\r Ссылка: https://cmdformatc.github.io/mesto/",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve"
