@@ -9,7 +9,6 @@ const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
 const popupEditProfile = document.querySelector('.popup_edit-profile');
 const popupAddCard = document.querySelector('.popup_add-card');
-const popupImage = document.querySelector('.popup_zoom-image');
 const popupEditProfileForm = popupEditProfile.querySelector('.popup__form');
 const popupAddCardForm = popupAddCard.querySelector('.popup__form');
 const popupInputProfileName = popupEditProfile.querySelector('.popup__input_profile_name');
