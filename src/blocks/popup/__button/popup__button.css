@@ -17,7 +17,9 @@
 .popup__button:hover{
     opacity: 0.8;
 }
-
+.popup.popup_delete-card .popup__button {
+    margin: 38px 0 0 0;
+}
 
 @media screen and (max-width: 1279px) { 
     .popup__button { 
