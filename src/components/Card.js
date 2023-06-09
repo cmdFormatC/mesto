@@ -38,6 +38,11 @@ export default class Card {
       }
       this._cardImage.src = this._link;
       this._cardImage.alt = this._name;
+      this._likes.forEach(item => {
+        if (item._id === this._currentUserId) {
+          this._likeButton.classList.add('element__like-button_active');
+        }
+      });
       this._likeCounter.textContent = this._likes.length;
       this._cardElement.querySelector('.element__title').textContent = this._name;
       const elementDiv = this._cardElement.querySelector('.element');
